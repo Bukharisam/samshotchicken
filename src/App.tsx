@@ -17,6 +17,7 @@ function App() {
       <main className="app-content">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/catering" element={<Catering />} />
           <Route path="/about" element={<AboutUs />} />
@@ -29,5 +30,4 @@ function App() {
     </div>
   );
 }
-
 export default App;

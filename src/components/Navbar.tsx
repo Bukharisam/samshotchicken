@@ -4,13 +4,15 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="nav">
-      <div className="left-nav-section">
-        <img src="/logo.jpeg" alt="Sams Hot Chicken logo" />
-        <h1>
-          {" "}
-          Sam's <span> Hot </span> Chicken{" "}
-        </h1>
-      </div>
+      <NavLink to="/" className="brand-link">
+        <div className="left-nav-section">
+          <img src="/logo.jpeg" alt="Sams Hot Chicken logo" />
+          <h1>
+            {" "}
+            Sam's <span> Hot </span> Chicken{" "}
+          </h1>
+        </div>
+      </NavLink>
 
       {/* this section will hold the links to different pages */}
       <div className="middle-nav-section">
