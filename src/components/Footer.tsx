@@ -31,7 +31,7 @@ const Footer = () => {
                   alt="Instagram"
                   className="footer-social-icon"
                 />
-                <span>@samshotchickenog</span>
+                <span>samshotchickenog</span>
               </a>
               <a
                 href="https://www.facebook.com/samshotchickenog"
@@ -44,7 +44,7 @@ const Footer = () => {
                   alt="Facebook"
                   className="footer-social-icon"
                 />
-                <span>@samshotchickenog</span>
+                <span>samshotchickenog</span>
               </a>
               <div className="footer-social-item">
                 <img
@@ -85,6 +85,11 @@ const Footer = () => {
             <div className="footer-catering-text">
               <p>Call us for any inquiries.</p>
               <p>Cash only business.</p>
+              <div className="footer-delivery-logos">
+                <img src="/images/icons8-doordash-50.png" alt="DoorDash" className="footer-delivery-logo" />
+                <img src="/icons8-uber-eats-app.svg" alt="UberEats" className="footer-delivery-logo" />
+                <img src="/images/icons8-grubhub-48.png" alt="GrubHub" className="footer-delivery-logo" />
+              </div>
             </div>
           </div>
           <div className="footer-column">
@@ -125,6 +130,10 @@ const Footer = () => {
             placeholder="Write your message here"
           />
         </div>
+      </div>
+      <div className="footer-bottom">
+        <div className="footer-divider"></div>
+        <p className="footer-note">© 2026 Sam's Hot Chicken. All rights reserved. Please inform us of any allergies before ordering.</p>
       </div>
     </footer>
   );
