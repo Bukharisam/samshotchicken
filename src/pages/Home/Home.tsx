@@ -37,6 +37,7 @@ const HeroRight = () => {
   );
 };
 
+// This here will shiowcased the 3 featured menu items.
 const FeaturedItems = () => {
   return (
     <>
