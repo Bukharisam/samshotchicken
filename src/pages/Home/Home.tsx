@@ -24,7 +24,7 @@ const Home = () => {
   );
 };
 
-function HeroRight() {
+const HeroRight = () => {
   return (
     <div className="hero-right-container">
       <img className="hero-right-image" src="/images/splash.png" alt="Hero" />
@@ -35,6 +35,14 @@ function HeroRight() {
       />
     </div>
   );
-}
+};
+
+const FeaturedItems = () => {
+  return (
+    <>
+    <p> Hello </p>
+    </>
+  )
+};
 
 export default Home;
