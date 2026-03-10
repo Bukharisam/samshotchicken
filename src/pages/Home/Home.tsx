@@ -2,25 +2,28 @@ import "./Home.css";
 
 const Home = () => {
   return (
-    <div className="hero-section">
-      <div className="hero-left-content">
-        <div className="hero-buttons">
-          <button> Hillside Ave, Queens NY </button>
-          <button> Nashville Style Seasoning </button>
-          <button> 4.9 ⭐ Ratings </button>
+    <>
+      <div className="hero-section">
+        <div className="hero-left-content">
+          <div className="hero-buttons">
+            <button> Hillside Ave, Queens NY </button>
+            <button> Nashville Style Seasoning </button>
+            <button> 4.9 ⭐ Ratings </button>
+          </div>
+          <div className="hero-text-highlight">
+            <h2 className="hero-text-title"> NYC'S Hottest</h2>
+            <p className="hero-text-subtitle"> Chicken Spot </p>
+            <p>
+              Crispy, juicy, and 100% Halal Nashville-style hot chicken made
+              fresh daily in <br /> the heart of Queens. Pick your heat level
+              from mild to insane!
+            </p>
+          </div>
         </div>
-        <div className="hero-text-highlight">
-          <h2 className="hero-text-title"> NYC'S Hottest</h2>
-          <p className="hero-text-subtitle"> Chicken Spot </p>
-          <p>
-            Crispy, juicy, and 100% Halal Nashville-style hot chicken made fresh
-            daily in <br /> the heart of Queens. Pick your heat level from mild
-            to insane!
-          </p>
-        </div>
+        <HeroRight />
       </div>
-      <HeroRight />
-    </div>
+      <FeaturedItems />
+    </>
   );
 };
 
@@ -37,13 +40,16 @@ const HeroRight = () => {
   );
 };
 
-// This here will shiowcased the 3 featured menu items.
+// This here will showcase the 3 featured menu items.
+// This is a Placeholder. 
 const FeaturedItems = () => {
   return (
-    <>
-    <p> Hello </p>
-    </>
-  )
+    <div className="featured-items-parent">
+      <div className="featured-card featured-card-1" />
+      <div className="featured-card featured-card-2" />
+      <div className="featured-card featured-card-3" />
+    </div>
+  );
 };
 
 export default Home;

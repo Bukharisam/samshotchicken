@@ -81,7 +81,6 @@
   font-size: 18px;
 }
 
-
 .hero-right-container {
   flex: 1;
   display: flex;
@@ -141,3 +140,27 @@
   }
 }
 
+/* Featured Items Section */
+.featured-items-parent {
+  display: flex;
+  gap: 20px;
+  padding: 20px 150px;
+}
+
+.featured-card {
+  flex: 1;
+  height: 180px;
+  border-radius: 14px;
+}
+
+.featured-card-1 {
+  background-color: #ff5733;
+}
+
+.featured-card-2 {
+  background-color: #ff9f1a;
+}
+
+.featured-card-3 {
+  background-color: #2ec4b6;
+}

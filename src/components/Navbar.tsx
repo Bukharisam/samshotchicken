@@ -20,8 +20,6 @@ const Navbar = () => {
         <NavLink to="/catering">Catering</NavLink>
         <NavLink to="/about">About US</NavLink>
         <NavLink to="/career">Career</NavLink>
-        <NavLink to="/reviews">Reviews</NavLink>
-        <NavLink to="/contact">Contacts</NavLink>
       </div>
 
       <div className="right-nav-section">
