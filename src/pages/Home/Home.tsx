@@ -23,6 +23,8 @@ const Home = () => {
         <HeroRight />
       </div>
       <FeaturedItems />
+      <Reviews />
+      <Operations />
     </>
   );
 };
@@ -57,5 +59,21 @@ const FeaturedItems = () => {
     </>
   );
 };
+
+const Reviews = () => {
+  return (
+    <section className="reviews-section">
+      <h3 className="reviews-title">What Our Customers Are Saying </h3>
+    </section>
+  );
+};
+
+const Operations = () => {
+  return (
+    <section className="operations-section">
+      <h3 className="operations-title">Our Operations</h3>
+    </section>
+  );
+}
 
 export default Home;

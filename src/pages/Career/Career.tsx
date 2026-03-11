@@ -113,12 +113,17 @@ const Career = () => {
             Include your availability, preferred position, and any restaurant
             experience.
           </p>
-          <a
-            className="career-cta-button"
-            href="mailto:info@samshotchicken.com"
-          >
-            Apply Now
-          </a>
+          <div className="career-cta-actions">
+            <a
+              className="career-cta-button"
+              href="mailto:info@samshotchicken.com"
+            >
+              Apply Now
+            </a>
+            <a className="career-cta-phone" href="tel:+13476775503">
+              (347) 677-5503
+            </a>
+          </div>
         </div>
       </div>
     </section>
