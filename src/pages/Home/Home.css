@@ -141,6 +141,46 @@
 }
 
 /* Featured Items Section */
+.featured-items-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 150px 0 150px;
+}
+
+.featured-items-title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  line-height: 1.1;
+}
+
+.featured-items-button {
+  background-color: transparent;
+  color: #ff8a3d;
+  border: 1px solid rgba(255, 95, 3, 0.75);
+  border-radius: 999px;
+  padding: 11px 22px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.featured-items-button:hover {
+  color: #ffffff;
+  background-color: rgba(255, 95, 3, 0.14);
+  border-color: #ff5f03;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(255, 95, 3, 0.25);
+}
+
+.featured-items-button:active {
+  transform: translateY(0);
+}
+
 .featured-items-parent {
   display: flex;
   gap: 20px;

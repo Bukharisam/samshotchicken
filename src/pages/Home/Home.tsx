@@ -41,14 +41,20 @@ const HeroRight = () => {
 };
 
 // This here will showcase the 3 featured menu items.
-// This is a Placeholder. 
+// This is a Placeholder.
 const FeaturedItems = () => {
   return (
-    <div className="featured-items-parent">
-      <div className="featured-card featured-card-1" />
-      <div className="featured-card featured-card-2" />
-      <div className="featured-card featured-card-3" />
-    </div>
+    <>
+      <div className="featured-items-header">
+        <h3 className="featured-items-title">Featured Items</h3>
+        <button className="featured-items-button">View Full Menu</button>
+      </div>
+      <div className="featured-items-parent">
+        <div className="featured-card featured-card-1" />
+        <div className="featured-card featured-card-2" />
+        <div className="featured-card featured-card-3" />
+      </div>
+    </>
   );
 };
 
