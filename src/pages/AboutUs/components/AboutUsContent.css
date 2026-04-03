@@ -1,0 +1,24 @@
+.about {
+  min-height: 100vh;
+  background-color: #0f0f0f;
+  padding: 80px 24px;
+}
+
+.about-inner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-loc {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 40px 0;
+}
+
+@media (max-width: 900px) {
+  .about-loc {
+    grid-template-columns: 1fr;
+  }
+}

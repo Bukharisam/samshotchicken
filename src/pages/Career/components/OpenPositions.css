@@ -1,0 +1,54 @@
+.career-section-header {
+  margin-top: 4px;
+  margin-bottom: 16px;
+}
+
+.career-section-header h2 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.career-section-header p {
+  margin: 8px 0 0;
+  color: #b7b7b7;
+  font-size: 0.97rem;
+}
+
+.career-role-card {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 95, 3, 0.28);
+  background: rgba(255, 95, 3, 0.06);
+  padding: 20px;
+}
+
+.career-role-card h3 {
+  margin: 0;
+  color: #ffffff;
+  font-size: 1.08rem;
+  font-weight: 800;
+}
+
+.career-role-card p {
+  margin: 10px 0 12px;
+  color: #d0d0d0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.career-role-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.career-role-meta span {
+  font-size: 0.82rem;
+  font-weight: 700;
+  border-radius: 999px;
+  padding: 6px 10px;
+  color: #f6f6f6;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}

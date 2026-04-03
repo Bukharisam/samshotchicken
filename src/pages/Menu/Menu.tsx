@@ -1,7 +1,7 @@
-import "./Menu.css";
+import MenuContent from "./components/MenuContent";
 
 const Menu = () => {
-  return <div className="menu-page">Menu</div>;
+  return <MenuContent />;
 };
 
 export default Menu;
