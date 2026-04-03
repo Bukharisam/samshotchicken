@@ -1,6 +1,18 @@
 import "./Home.css";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "../../lib/supabase";
+
+type FeaturedProduct = {
+  id: number;
+  name: string;
+  price: string;
+  image: string;
+  isFeatured: boolean;
+  category_id: number | null;
+  spice_level_id: number | null;
+};
+
 const Home = () => {
   return (
     <>
@@ -47,9 +59,45 @@ const HeroRight = () => {
 
 // ============================================================
 
+// Fetches featured products from Supabase.
+// this comes first before the component.
+const getFeaturedProducts = async (): Promise<FeaturedProduct[]> => {
+  const { data, error } = await supabase
+    .from("products")
+    .select("*")
+    .eq("isFeatured", true);
+
+  if (error) throw error;
+  return data ?? [];
+};
+
 // Fetches featured products from Supabase and displays them as cards.
 const FeaturedItems = () => {
-  
+  const [cartItems, setCartItems] = useState<number[]>([]);
+
+  const {
+    data = [],
+    isLoading,
+    isError,
+  } = useQuery<FeaturedProduct[]>({
+    queryKey: ["featuredProducts"],
+    queryFn: getFeaturedProducts,
+  });
+
+  const addToCart = (productId: number) => {
+    setCartItems((currentCart) =>
+      currentCart.includes(productId)
+        ? currentCart
+        : [...currentCart, productId],
+    );
+  };
+
+  if (isLoading)
+    return <p className="featured-status">Loading featured items...</p>;
+  if (isError)
+    return <p className="featured-status">Could not load featured items.</p>;
+  if (!data.length)
+    return <p className="featured-status">No featured items right now.</p>;
 
   return (
     <>
@@ -58,9 +106,36 @@ const FeaturedItems = () => {
         <button className="featured-items-button">View Full Menu</button>
       </div>
       <div className="featured-items-parent">
-        <div className="featured-card featured-card-1" />
-        <div className="featured-card featured-card-2" />
-        <div className="featured-card featured-card-3" />
+        {data.map((product) => {
+          const isInCart = cartItems.includes(product.id);
+
+          return (
+            <article key={product.id} className="featured-item-card">
+              <img
+                className="featured-item-image"
+                src={product.image}
+                alt={product.name}
+                loading="lazy"
+              />
+              <div className="featured-item-content">
+                <div className="featured-item-row">
+                  <h4 className="featured-item-name">{product.name}</h4>
+                  <p className="featured-item-price">{product.price}</p>
+                </div>
+                <div className="featured-item-cart-actions">
+                  <button
+                    className="featured-item-cart-button featured-item-cart-button-add"
+                    onClick={() => addToCart(product.id)}
+                    type="button"
+                    disabled={isInCart}
+                  >
+                    Add to Cart
+                  </button>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
     </>
   );
