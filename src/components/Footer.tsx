@@ -81,18 +81,6 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-column">
-            <h3 className="footer-column-heading">Catering</h3>
-            <div className="footer-catering-text">
-              <p>Call us for any inquiries.</p>
-              <p>Cash only business.</p>
-              <div className="footer-delivery-logos">
-                <img src="/images/icons8-doordash-50.png" alt="DoorDash" className="footer-delivery-logo" />
-                <img src="/icons8-uber-eats-app.svg" alt="UberEats" className="footer-delivery-logo" />
-                <img src="/images/icons8-grubhub-48.png" alt="GrubHub" className="footer-delivery-logo" />
-              </div>
-            </div>
-          </div>
-          <div className="footer-column">
             <h3 className="footer-column-heading">Quick Access</h3>
             <div className="footer-quick-links">
               <NavLink to="/" className="footer-quick-link">
@@ -100,9 +88,6 @@ const Footer = () => {
               </NavLink>
               <NavLink to="/menu" className="footer-quick-link">
                 Menu
-              </NavLink>
-              <NavLink to="/catering" className="footer-quick-link">
-                Catering
               </NavLink>
               <NavLink to="/about" className="footer-quick-link">
                 About Us

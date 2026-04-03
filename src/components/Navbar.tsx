@@ -17,7 +17,6 @@ const Navbar = () => {
       {/* this section will hold the links to different pages */}
       <div className="middle-nav-section">
         <NavLink to="/menu">Menu</NavLink>
-        <NavLink to="/catering">Catering</NavLink>
         <NavLink to="/about">About US</NavLink>
         <NavLink to="/career">Career</NavLink>
       </div>

@@ -1,18 +1,19 @@
 import "./Home.css";
-
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "../../lib/supabase";
 const Home = () => {
   return (
     <>
       <div className="hero-section">
         <div className="hero-left-content">
           <div className="hero-buttons">
-            <button> Hillside Ave, Queens NY </button>
-            <button> Nashville Style Seasoning </button>
-            <button> 4.9 ⭐ Ratings </button>
+            <button>Hillside Ave, Queens NY</button>
+            <button>Nashville Style Seasoning</button>
+            <button>4.9 ⭐ Ratings</button>
           </div>
           <div className="hero-text-highlight">
-            <h2 className="hero-text-title"> NYC'S Hottest</h2>
-            <p className="hero-text-subtitle"> Chicken Spot </p>
+            <h2 className="hero-text-title">NYC'S Hottest</h2>
+            <p className="hero-text-subtitle">Chicken Spot</p>
             <p>
               Crispy, juicy, and 100% Halal Nashville-style hot chicken made
               fresh daily in <br /> the heart of Queens. Pick your heat level
@@ -29,6 +30,8 @@ const Home = () => {
   );
 };
 
+// ============================================================
+
 const HeroRight = () => {
   return (
     <div className="hero-right-container">
@@ -42,9 +45,12 @@ const HeroRight = () => {
   );
 };
 
-// This here will showcase the 3 featured menu items.
-// This is a Placeholder.
+// ============================================================
+
+// Fetches featured products from Supabase and displays them as cards.
 const FeaturedItems = () => {
+  
+
   return (
     <>
       <div className="featured-items-header">
@@ -60,13 +66,17 @@ const FeaturedItems = () => {
   );
 };
 
+// ============================================================
+
 const Reviews = () => {
   return (
     <section className="reviews-section">
-      <h3 className="reviews-title">What Our Customers Are Saying </h3>
+      <h3 className="reviews-title">What Our Customers Are Saying</h3>
     </section>
   );
 };
+
+// ============================================================
 
 const Operations = () => {
   return (
@@ -74,6 +84,6 @@ const Operations = () => {
       <h3 className="operations-title">Our Operations</h3>
     </section>
   );
-}
+};
 
 export default Home;

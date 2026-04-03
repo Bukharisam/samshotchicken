@@ -162,7 +162,11 @@
   color: #ff8a3d;
   border: 1px solid rgba(255, 95, 3, 0.75);
   border-radius: 999px;
-  padding: 11px 22px;
+  height: 37px;
+  padding: 0 22px;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: border-box;
   font-size: 0.95rem;
   font-weight: 700;
   cursor: pointer;
