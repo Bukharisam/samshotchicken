@@ -146,6 +146,13 @@
   cursor: not-allowed;
 }
 
+.featured-add-success {
+  margin: 2px 0 0;
+  color: #49db80;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
 .featured-status {
   color: rgba(255, 255, 255, 0.86);
   padding: 12px 150px 0;

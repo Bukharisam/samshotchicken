@@ -1,0 +1,130 @@
+.checkout-page {
+  min-height: 100%;
+  padding: 42px clamp(16px, 5vw, 70px) 70px;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 95, 3, 0.14), transparent 35%),
+    #0f0f0f;
+  color: #fff;
+}
+
+.checkout-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+}
+
+.checkout-summary,
+.checkout-form-card {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(
+    180deg,
+    rgba(16, 16, 16, 0.96),
+    rgba(42, 42, 42, 0.94)
+  );
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.checkout-summary h1,
+.checkout-form-card h2 {
+  margin: 0 0 14px;
+  color: #ff9c63;
+}
+
+.checkout-summary-list {
+  display: grid;
+  gap: 10px;
+}
+
+.checkout-item {
+  display: grid;
+  grid-template-columns: 68px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.checkout-item-image {
+  width: 68px;
+  height: 68px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.checkout-item-name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.checkout-item-meta {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.checkout-item-spice {
+  margin: 4px 0 0;
+  color: #ffbe98;
+  font-size: 0.84rem;
+  font-weight: 700;
+}
+
+.checkout-total {
+  margin: 18px 0 0;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 145, 92, 0.72);
+  background: rgba(255, 95, 3, 0.16);
+  color: #ffd4bc;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow: 0 8px 20px rgba(255, 95, 3, 0.22);
+}
+
+.checkout-empty {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.checkout-form {
+  display: grid;
+  gap: 12px;
+}
+
+.checkout-form label {
+  display: grid;
+  gap: 6px;
+  font-weight: 700;
+  color: #ffbc96;
+}
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 95, 3, 0.35);
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  box-sizing: border-box;
+}
+
+.place-order-btn {
+  margin-top: 4px;
+  height: 44px;
+  border: 1px solid #ff5f03;
+  background: #ff5f03;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .checkout-layout {
+    grid-template-columns: 1fr;
+  }
+}

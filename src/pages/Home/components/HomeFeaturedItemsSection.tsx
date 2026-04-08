@@ -1,5 +1,8 @@
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
+import { useNavigate } from "react-router-dom";
 import { supabase } from "../../../lib/supabase";
+import useCartStore from "../../../store/cartStore";
 
 // ── Data Fetching ─────────────────────────────────────────────────────────────
 
@@ -17,6 +20,17 @@ const getFeaturedProducts = async () => {
 // ── Component ─────────────────────────────────────────────────────────────────
 
 const HomeFeaturedItemsSection = () => {
+  const navigate = useNavigate();
+  const [lastAddedProductId, setLastAddedProductId] = useState("");
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  const showAddSuccess = (productId: number | string) => {
+    setLastAddedProductId(String(productId));
+    window.setTimeout(() => {
+      setLastAddedProductId("");
+    }, 1500);
+  };
+
   const {
     data = [],
     isLoading,
@@ -42,7 +56,13 @@ const HomeFeaturedItemsSection = () => {
       {/* Header row — title + "View Full Menu" button */}
       <div className="featured-items-header">
         <h3 className="featured-items-title">Featured Items</h3>
-        <button className="featured-items-button">View Full Menu</button>
+        <button
+          className="featured-items-button"
+          type="button"
+          onClick={() => navigate("/menu")}
+        >
+          View Full Menu
+        </button>
       </div>
 
       {/* Product grid */}
@@ -68,9 +88,23 @@ const HomeFeaturedItemsSection = () => {
                 <button
                   className="featured-item-cart-button featured-item-cart-button-add"
                   type="button"
+                  onClick={() => {
+                    addToCart({
+                      id: product.id,
+                      name: product.name,
+                      price: product.price,
+                      image: product.image,
+                    });
+                    showAddSuccess(product.id);
+                  }}
                 >
                   Add to Cart
                 </button>
+                {lastAddedProductId === String(product.id) && (
+                  <p className="featured-add-success">
+                    Success! Added to cart.
+                  </p>
+                )}
               </div>
             </div>
           </article>
